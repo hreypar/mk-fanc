@@ -19,3 +19,8 @@ HIC_GENOME="digested_genome/GRCh38_HindIII.fa"
 # number of threads to use
 #
 N_THREADS="7"
+
+# genome index file
+#
+GENOME_INDEX="references/GRCh38/Sequence/BWAIndex/genome"
+
