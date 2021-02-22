@@ -8,6 +8,6 @@ find -L data/ \
 	-name "*.fastq.gz" \
 | sed -r \
 	-e 's#^data/#results/#' \
-	-e 's#_R[12].fastq.gz#/#' \
+	-e 's#_R[12].fastq.gz##' \
 | sort -u
 
