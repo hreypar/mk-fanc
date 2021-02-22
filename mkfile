@@ -10,17 +10,31 @@
 #
 # AUTHOR: HRG
 #
+# include config file
+#
+<config.mk
+
 # Run fanc
 #
 results/%:	data/%_R1.fastq.gz data/%_R2.fastq.gz
 	fanc auto \
 		$prereq \
 		$target \
-		-g \
+		--genome $HIC_GENOME \
 		-i \
 		-n `basename $target` \
-		-t \
-		-r \
+		--threads $N_THREADS \
+		--restriction-enzyme $ENZYME \
 		--split-ligation-junction \
 		-q \
+
+# digest reference genome 
+#
+digest_genome:V:
+	mkdir -p `dirname $HIC_GENOME`
+	fanc fragments \
+		--chromosomes $MY_CHROMOSOMES \
+		$REF_GENOME \
+		$ENZYME \
+		$HIC_GENOME
 
