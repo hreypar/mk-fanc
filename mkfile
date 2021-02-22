@@ -21,12 +21,11 @@ results/%:	data/%_R1.fastq.gz data/%_R2.fastq.gz
 		$prereq \
 		$target \
 		--genome $HIC_GENOME \
-		-i \
-		-n `basename $target` \
+		--genome-index $GENOME_INDEX \
+		--basename `basename $target` \
 		--threads $N_THREADS \
 		--restriction-enzyme $ENZYME \
-		--split-ligation-junction \
-		-q \
+		--split-ligation-junction
 
 # digest reference genome 
 #
