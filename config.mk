@@ -22,5 +22,5 @@ N_THREADS="7"
 
 # genome index file
 #
-GENOME_INDEX="references/GRCh38/Sequence/BWAIndex/genome"
+GENOME_INDEX="references/GRCh38/Sequence/Bowtie2Index/genome"
 
