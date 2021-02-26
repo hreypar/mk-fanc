@@ -14,7 +14,7 @@ ENZYME="HindIII"
 
 # Digested genome for the Hi-C object
 #
-HIC_GENOME="digested_genome/GRCh38_HindIII.fa"
+HIC_GENOME="digested_genome/GRCh38_HindIII.bed"
 
 # number of threads to use
 #
