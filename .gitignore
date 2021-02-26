@@ -9,6 +9,7 @@ CTestTestfile.cmake
 data
 results
 references
+condor*
 
 .Rhistory
 .RData
